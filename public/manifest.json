@@ -1,0 +1,21 @@
+{
+  "name": "HairPhones Shipper",
+  "short_name": "HairPhones Shipper",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "black",
+  "description": "Ứng dụng HairPhones Shipper",
+  "icons": [
+    {
+      "src": "/icons/image512.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/image512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
