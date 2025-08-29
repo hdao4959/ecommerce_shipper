@@ -17,24 +17,39 @@ const ListOrder = () => {
             <option value="1">Chờ giao</option>
             <option value="2">Đang giao</option>
             <option value="3">Hoàn thành</option>
+            <option value="4">Mới nhất</option>
+            <option value="5">Cũ nhất</option>
           </Form.Select>
         </div>
-
-        <InputGroup className="mb-3" style={{ maxWidth: '500px' }}>
-          <InputGroup.Text id="basic-addon1">
-            <i className="fa-solid fa-magnifying-glass"></i>
-          </InputGroup.Text>
-          <Form.Control
-            placeholder="Tìm kiếm đơn hàng..."
-            aria-label="Search"
-            aria-describedby="basic-addon1"
-          />
-        </InputGroup>
+        <div className="d-flex justify-content-between align-items-center mb-3">
+          <Form.Select
+            aria-label="Lọc số lượng"
+            style={{ maxWidth: '200px', marginRight: '10px' }}
+            // size="sm"
+          >
+            <option>Số lượng</option>
+            <option value="1">10</option>
+            <option value="2">20</option>
+            <option value="3">50</option>
+          </Form.Select>
+          <InputGroup  style={{ maxWidth: '500px',
+            minWidth: '300px'
+           }}>
+            <InputGroup.Text id="basic-addon1">
+              <i className="fa-solid fa-magnifying-glass"></i>
+            </InputGroup.Text>
+            <Form.Control
+              placeholder="Tìm kiếm đơn hàng..."
+              aria-label="Search"
+              aria-describedby="basic-addon1"
+            />
+          </InputGroup>
+        </div>
 
         <div className="table-responsive">
           <Table striped bordered hover responsive="sm">
             <thead className="table-light">
-              <tr>
+              <tr className='text-center'>
                 <th>#</th>
                 <th>Mã đơn</th>
                 <th>Khách hàng</th>
@@ -44,7 +59,7 @@ const ListOrder = () => {
                 <th>Hành động</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className='text-center'>
               <tr>
                 <td>1</td>
                 <td>DH001</td>

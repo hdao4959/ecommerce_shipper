@@ -1,0 +1,5 @@
+const env = import.meta.env
+export default {
+  VITE_SERVER_BASE_URL: env.VITE_SERVER_BASE_URL,
+  VITE_API_BASE_URL: env.VITE_API_BASE_URL
+}

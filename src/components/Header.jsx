@@ -13,7 +13,7 @@ const Header = () => {
     <>
         <Navbar  expand={expand} className="bg-body-tertiary mb-3 ">
           <Container>
-            <Navbar.Brand as={Link} to="/" className='fw-bold'> <Image width={"30px"} src='/public/icons/image512.png'/><span className='text-primary'>HairPhones Shipper</span></Navbar.Brand>
+            <Navbar.Brand as={Link} to="/" className='fw-bold'> <Image width={"30px"} src='/icons/image512.png'/><span className='text-primary'>HairPhones Shipper</span></Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
