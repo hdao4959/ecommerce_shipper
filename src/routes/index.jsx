@@ -2,25 +2,30 @@ import React from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 import MainLayout from '../layouts/Main'
 import Home from '../pages/Home'
-import ListOrder from '../pages/ListOrder/index'
 import BlankLayout from '../layouts/Blank'
 import Login from '../pages/Auth/Login'
+import ListDelivery from '../pages/Delivery/ListDelivery'
+import DetailDelivery from '../pages/Delivery/DetailDelivery'
 
 const routes = createBrowserRouter([
   {
-    element: <MainLayout/>,
+    element: <MainLayout />,
     children: [
       {
-        index: true, element: <Home/>
-      }, {
-        path: '/orders', element: <ListOrder/>
+        index: true, element: <Home />
+      },
+      {
+        path: '/deliveries', element: <ListDelivery />
+      },
+      {
+        path: '/deliveries/:id', element: <DetailDelivery />
       }
     ]
   }, {
-    element: <BlankLayout/>,
+    element: <BlankLayout />,
     children: [
       {
-        path: '/login', element: <Login/>
+        path: '/login', element: <Login />
       }
     ]
   }

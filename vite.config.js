@@ -32,9 +32,13 @@ export default defineConfig({
     })
   ],
   server: {
-    host: true
+    host: true,
+    port: 5176,
+    strictPort: true
   },
   preview: {
-    host: true
+    host: true,
+    port: 5176,
+    strictPort: true
   }
 })
