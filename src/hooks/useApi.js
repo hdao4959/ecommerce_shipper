@@ -24,10 +24,10 @@ const useApi = (func, autoFetch = false, ...initialArgs) => {
   }
 
   useEffect(() => {
-    if (autoFetch) {
+    if (autoFetch === true) {
       fetchApi(...initialArgs)
     }
-  }, [])
+  }, [autoFetch])
 
   return {
     loading, response, data, error, fetchApi

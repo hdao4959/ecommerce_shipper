@@ -3,13 +3,14 @@ import { Button, Card, Form, InputGroup, Table } from 'react-bootstrap'
 import useApi from '../../../hooks/useApi'
 import deliveryService, { DELIVERY_STATUS } from '../../../services/deliveryService'
 import { formatPrice } from '../../../utils/formatPrice'
+import { Link } from 'react-router-dom'
 
 const ListDelivery = () => {
 
   const { data: dataDeliveries } = useApi(deliveryService.getListDelivery, true)
 
   return (
-    <Card className="shadow-sm border-0" >
+    <Card className="shadow-sm border-0">
       <Card.Body>
         <div className="d-flex justify-content-between align-items-center mb-3">
           <h5 className="fw-bold text-primary mb-0">📦 Danh sách đơn hàng cần giao</h5>
@@ -55,7 +56,7 @@ const ListDelivery = () => {
         <div className='row row-cols-1 row-cols-md-2'>
           {
             dataDeliveries?.deliveries && dataDeliveries.deliveries.map((item, index) => (
-              <Card className='col' key={index}>
+              <Card className='col text-decoration-none' key={index}  as={Link} to={`/deliveries/${item?._id}`}>
                 {/* <Card.Img variant="top" src="/icons/image512.png" /> */}
                 <Card.Body>
                   <Card.Title>Đơn hàng {item._id}</Card.Title>

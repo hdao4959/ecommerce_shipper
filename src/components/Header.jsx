@@ -8,7 +8,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Link } from 'react-router-dom';
 const Header = () => {
-  const expand = 'md'
+  const expand = 'lg'
   return (
     <>
         <Navbar  expand={expand} className="bg-body-tertiary mb-3 ">

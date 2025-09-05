@@ -5,6 +5,7 @@ import { registerSW } from 'virtual:pwa-register'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import 'mapbox-gl/dist/mapbox-gl.css';
 const updateSW = registerSW({
   onNeedRefresh() {
     if (confirm("Có phiên bản mới, tải lại chứ?")) {
@@ -16,9 +17,11 @@ const updateSW = registerSW({
   },
 });
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  // <StrictMode>
+  <>
     <App />
-    <ToastContainer draggable newestOnTop={true}/>
+    <ToastContainer draggable newestOnTop={true} />
+  </>
 
-  </StrictMode>,
+  // </StrictMode>,
 )

@@ -9,7 +9,7 @@ const MainLayout = () => {
       height: "100vh",
     }}>
       <Header />
-      <Container>
+      <Container style={{ height: "100%" }}>
         <Outlet />
       </Container>
     </div>

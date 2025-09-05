@@ -18,6 +18,10 @@ const getListDelivery = () => {
   return axiosInstance.get('/deliveries')
 }
 
+const getDetailDelivery = (id) => {
+  return axiosInstance.get('/deliveries/' + id);
+}
+
 export default {
-  getListDelivery
+  getListDelivery, getDetailDelivery
 }
